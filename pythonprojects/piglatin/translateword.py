@@ -1,14 +1,8 @@
 #!/usr/bin/env python
+from getfirstletter import getFirstLetter
+from is_vowel import isVowel
 
 
-def isVowel(string):
-    if string in 'aeiouAEIOU':
-        return True
-    else:
-        return False
-
-def getFirstLetter(string):
-    return string[0]
 
 def translateWord(string):
     if ' ' in string:
@@ -21,26 +15,3 @@ def translateWord(string):
         return string + """'way"""
     else:
         return string[1:] + """'""" + first_letter + "ay"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if __name__ == "__main__":
-    word_list = ['hello','paytime', 'OK', 'alphabet', 'time',]
-
-    for w in word_list:
-        pig_latin_word = translateWord(w)
-        print pig_latin_word
